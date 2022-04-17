@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{#xhtmlxtras_dlg.attribs_title}</title>
+    <script src="../../tiny_mce_popup.js" type="text/javascript"></script>
+    <script src="../../utils/mctabs.js" type="text/javascript"></script>
+    <script src="../../utils/editable_selects.js" type="text/javascript"></script>
+    <script src="../../utils/form_utils.js" type="text/javascript"></script>
+    <script src="js/attributes.js" type="text/javascript"></script>
+    <link href="css/attributes.css" rel="stylesheet" type="text/css"/>
+</head>
+<body aria-labelledby="app_title" role="application" style="display: none">
+<span id="app_title" style="display:none;">{#xhtmlxtras_dlg.attribs_title}</span>
+<form action="#" onsubmit="insertAction();return false;">
+    <div class="tabs">
+        <ul>
+            <li aria-controls="general_panel" class="current" id="general_tab"><span><a
+                    href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#xhtmlxtras_dlg.attribute_attrib_tab}</a></span>
+            </li>
+            <li aria-controls="events_panel" id="events_tab"><span><a
+                    href="javascript:mcTabs.displayTab('events_tab','events_panel');" onmousedown="return false;">{#xhtmlxtras_dlg.attribute_events_tab}</a></span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="panel_wrapper">
+        <div class="panel current" id="general_panel">
+            <fieldset>
+                <legend>{#xhtmlxtras_dlg.attribute_attrib_tab}</legend>
+                <table border="0" cellpadding="0" cellspacing="4" role="presentation">
+                    <tr>
+                        <td class="label"><label for="title"
+                                                 id="titlelabel">{#xhtmlxtras_dlg.attribute_label_title}</label>:
+                        </td>
+                        <td><input class="mceFocus" id="title" name="title" type="text" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="id" id="idlabel">{#xhtmlxtras_dlg.attribute_label_id}</label>:
+                        </td>
+                        <td><input id="id" name="id" type="text" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="classlist" id="classlabel">{#class_name}</label></td>
+                        <td>
+                            <select class="mceEditableSelect" id="classlist" name="classlist">
+                                <option selected="selected" value="">{#not_set}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="style"
+                                                 id="stylelabel">{#xhtmlxtras_dlg.attribute_label_style}</label>:
+                        </td>
+                        <td><input id="style" name="style" type="text" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="dir"
+                                                 id="dirlabel">{#xhtmlxtras_dlg.attribute_label_langdir}</label>:
+                        </td>
+                        <td>
+                            <select id="dir" name="dir">
+                                <option value="">{#not_set}</option>
+                                <option value="ltr">{#xhtmlxtras_dlg.option_ltr}</option>
+                                <option value="rtl">{#xhtmlxtras_dlg.option_rtl}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="lang"
+                                                 id="langlabel">{#xhtmlxtras_dlg.attribute_label_langcode}</label>:
+                        </td>
+                        <td>
+                            <input id="lang" name="lang" type="text" value=""/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="tabindex" id="tabindexlabel">{#xhtmlxtras_dlg.attribute_label_tabindex}</label>
+                        </td>
+                        <td><input id="tabindex" name="tabindex" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="accesskey"
+                                   id="accesskeylabel">{#xhtmlxtras_dlg.attribute_label_accesskey}</label></td>
+                        <td><input id="accesskey" name="accesskey" type="text" value=""/></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div class="panel" id="events_panel">
+            <fieldset>
+                <legend>{#xhtmlxtras_dlg.attribute_events_tab}</legend>
+
+                <table border="0" cellpadding="0" cellspacing="4" role="presentation">
+                    <tr>
+                        <td class="label"><label for="onfocus">onfocus</label>:</td>
+                        <td><input id="onfocus" name="onfocus" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label"><label for="onblur">onblur</label>:</td>
+                        <td><input id="onblur" name="onblur" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label"><label for="onclick">onclick</label>:</td>
+                        <td><input id="onclick" name="onclick" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label"><label for="ondblclick">ondblclick</label>:</td>
+                        <td><input id="ondblclick" name="ondblclick" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label"><label for="onmousedown">onmousedown</label>:</td>
+                        <td><input id="onmousedown" name="onmousedown" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label"><label for="onmouseup">onmouseup</label>:</td>
+                        <td><input id="onmouseup" name="onmouseup" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label"><label for="onmouseover">onmouseover</label>:</td>
+                        <td><input id="onmouseover" name="onmouseover" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label"><label for="onmousemove">onmousemove</label>:</td>
+                        <td><input id="onmousemove" name="onmousemove" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label"><label for="onmouseout">onmouseout</label>:</td>
+                        <td><input id="onmouseout" name="onmouseout" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label"><label for="onkeypress">onkeypress</label>:</td>
+                        <td><input id="onkeypress" name="onkeypress" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label"><label for="onkeydown">onkeydown</label>:</td>
+                        <td><input id="onkeydown" name="onkeydown" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label"><label for="onkeyup">onkeyup</label>:</td>
+                        <td><input id="onkeyup" name="onkeyup" type="text" value=""/></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+    </div>
+    <div class="mceActionPanel">
+        <input id="insert" name="insert" type="submit" value="{#insert}"/>
+        <input id="cancel" name="cancel" onclick="tinyMCEPopup.close();" type="button" value="{#cancel}"/>
+    </div>
+</form>
+</body>
+</html>

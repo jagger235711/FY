@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="GB2312">
+    <file url="file://$PROJECT_DIR$/after/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/after/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/front/src" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/src/bean/data/Example7_10_Bean.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/src/servlet/control/Example7_10_End_Servlet.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/src/servlet/control/Example7_10_Servlet.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/web" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/front/web/css/datouwang.css" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/web/example7_10_examination.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/front/web/images/a1.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/front/web/images/a2.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/front/web/images/a3.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/front/web/images/a4.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/front/web/images/focus_btn.png" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/web/images/i1.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/web/images/i2.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/web/images/i3.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/web/images/i4.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/web/images/i5.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/web/js/jquery-1.8.3.min.js" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/web/js/koala.min.1.5.js" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/web/js/terminator2.2.min.js" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/front/web/searchSheet.jsp" charset="GB2312" />
+    <file url="PROJECT" charset="GB2312" />
+  </component>
+</project>

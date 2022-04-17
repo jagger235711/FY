@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{#advanced_dlg.colorpicker_title}</title>
+    <script src="../../tiny_mce_popup.js" type="text/javascript"></script>
+    <script src="../../utils/mctabs.js" type="text/javascript"></script>
+    <script src="js/color_picker.js" type="text/javascript"></script>
+</head>
+<body aria-labelledby="app_label" id="colorpicker" role="application" style="display: none">
+<span class="mceVoiceLabel" id="app_label" style="display:none;">{#advanced_dlg.colorpicker_title}</span>
+<form action="#" onsubmit="insertAction();return false">
+    <div class="tabs">
+        <ul>
+            <li aria-controls="picker_panel" class="current" id="picker_tab"><span><a
+                    href="javascript:mcTabs.displayTab('picker_tab','picker_panel');" onmousedown="return false;">{#advanced_dlg.colorpicker_picker_tab}</a></span>
+            </li>
+            <li aria-controls="rgb_panel" id="rgb_tab"><span><a href="javascript:;"
+                                                                onclick="mcTabs.displayTab('rgb_tab','rgb_panel');"
+                                                                onmousedown="return false;">{#advanced_dlg.colorpicker_palette_tab}</a></span>
+            </li>
+            <li aria-controls="named_panel" id="named_tab"><span><a href="javascript:;"
+                                                                    onclick="javascript:mcTabs.displayTab('named_tab','named_panel');"
+                                                                    onmousedown="return false;">{#advanced_dlg.colorpicker_named_tab}</a></span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="panel_wrapper">
+        <div class="panel current" id="picker_panel">
+            <fieldset>
+                <legend>{#advanced_dlg.colorpicker_picker_title}</legend>
+                <div id="picker">
+                    <img alt="" id="colors" onclick="computeColor(event)"
+                         onmousedown="isMouseDown = true;return false;"
+                         onmousemove="if (isMouseDown && isMouseOver) computeColor(event); return false;"
+                         onmouseout="isMouseOver=false;"
+                         onmouseover="isMouseOver=true;" onmouseup="isMouseDown = false;" src="img/colorpicker.jpg"/>
+
+                    <div id="light">
+                        <!-- Will be filled with divs -->
+                    </div>
+
+                    <br style="clear: both"/>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="panel" id="rgb_panel">
+            <fieldset>
+                <legend id="webcolors_title">{#advanced_dlg.colorpicker_palette_title}</legend>
+                <div id="webcolors">
+                    <!-- Gets filled with web safe colors-->
+                </div>
+
+                <br style="clear: both"/>
+            </fieldset>
+        </div>
+
+        <div class="panel" id="named_panel">
+            <fieldset id="named_picker_label">
+                <legend id="named_title">{#advanced_dlg.colorpicker_named_title}</legend>
+                <div aria-labelledby="named_picker_label" id="namedcolors" role="listbox" tabindex="0">
+                    <!-- Gets filled with named colors-->
+                </div>
+
+                <br style="clear: both"/>
+
+                <div id="colornamecontainer">
+                    {#advanced_dlg.colorpicker_name} <span id="colorname"></span>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="mceActionPanel">
+        <input id="insert" name="insert" type="submit" value="{#apply}"/>
+
+        <div id="preview"></div>
+
+        <div id="previewblock">
+            <label for="color">{#advanced_dlg.colorpicker_color}</label> <input aria-required="true"
+                                                                                class="text mceFocus" id="color"
+                                                                                size="8"
+                                                                                type="text"/>
+        </div>
+    </div>
+</form>
+</body>
+</html>

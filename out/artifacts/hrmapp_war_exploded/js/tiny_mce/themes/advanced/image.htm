@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{#advanced_dlg.image_title}</title>
+    <script src="../../tiny_mce_popup.js" type="text/javascript"></script>
+    <script src="../../utils/mctabs.js" type="text/javascript"></script>
+    <script src="../../utils/form_utils.js" type="text/javascript"></script>
+    <script src="js/image.js" type="text/javascript"></script>
+</head>
+<body id="image" style="display: none">
+<form action="#" onsubmit="ImageDialog.update();return false;">
+    <div class="tabs">
+        <ul>
+            <li class="current" id="general_tab"><span><a
+                    href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#advanced_dlg.image_title}</a></span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="panel_wrapper">
+        <div class="panel current" id="general_panel">
+            <table border="0" cellpadding="4" cellspacing="0">
+                <tr>
+                    <td class="nowrap"><label for="src">{#advanced_dlg.image_src}</label></td>
+                    <td>
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td><input class="mceFocus" id="src" name="src" onchange="ImageDialog.getImageData();" style="width: 200px"
+                                           type="text" value=""/></td>
+                                <td id="srcbrowsercontainer">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="image_list">{#advanced_dlg.image_list}</label></td>
+                    <td><select id="image_list" name="image_list"
+                                onchange="document.getElementById('src').value=this.options[this.selectedIndex].value;document.getElementById('alt').value=this.options[this.selectedIndex].text;"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nowrap"><label for="alt">{#advanced_dlg.image_alt}</label></td>
+                    <td><input id="alt" name="alt" style="width: 200px" type="text" value=""/></td>
+                </tr>
+                <tr>
+                    <td class="nowrap"><label for="align">{#advanced_dlg.image_align}</label></td>
+                    <td><select id="align" name="align" onchange="ImageDialog.updateStyle();">
+                        <option value="">{#not_set}</option>
+                        <option value="baseline">{#advanced_dlg.image_align_baseline}</option>
+                        <option value="top">{#advanced_dlg.image_align_top}</option>
+                        <option value="middle">{#advanced_dlg.image_align_middle}</option>
+                        <option value="bottom">{#advanced_dlg.image_align_bottom}</option>
+                        <option value="text-top">{#advanced_dlg.image_align_texttop}</option>
+                        <option value="text-bottom">{#advanced_dlg.image_align_textbottom}</option>
+                        <option value="left">{#advanced_dlg.image_align_left}</option>
+                        <option value="right">{#advanced_dlg.image_align_right}</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td class="nowrap"><label for="width">{#advanced_dlg.image_dimensions}</label></td>
+                    <td><input id="width" maxlength="5" name="width" size="3" type="text" value=""/>
+                        x
+                        <input id="height" maxlength="5" name="height" size="3" type="text" value=""/></td>
+                </tr>
+                <tr>
+                    <td class="nowrap"><label for="border">{#advanced_dlg.image_border}</label></td>
+                    <td><input id="border" maxlength="3" name="border" onchange="ImageDialog.updateStyle();" size="3" type="text"
+                               value=""/></td>
+                </tr>
+                <tr>
+                    <td class="nowrap"><label for="vspace">{#advanced_dlg.image_vspace}</label></td>
+                    <td><input id="vspace" maxlength="3" name="vspace" onchange="ImageDialog.updateStyle();" size="3" type="text"
+                               value=""/></td>
+                </tr>
+                <tr>
+                    <td class="nowrap"><label for="hspace">{#advanced_dlg.image_hspace}</label></td>
+                    <td><input id="hspace" maxlength="3" name="hspace" onchange="ImageDialog.updateStyle();" size="3" type="text"
+                               value=""/></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="mceActionPanel">
+        <input id="insert" name="insert" type="submit" value="{#insert}"/>
+        <input id="cancel" name="cancel" onclick="tinyMCEPopup.close();" type="button" value="{#cancel}"/>
+    </div>
+</form>
+</body>
+</html>
