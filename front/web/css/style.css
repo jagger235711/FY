@@ -1,0 +1,992 @@
+/*---
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+---*/
+/* reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* start editing from here */
+a {
+    text-decoration: none;
+}
+
+.txt-rt {
+    text-align: right;
+}
+
+/* text align right */
+.txt-lt {
+    text-align: left;
+}
+
+/* text align left */
+.txt-center {
+    text-align: center;
+}
+
+/* text align center */
+.float-rt {
+    float: right;
+}
+
+/* float right */
+.float-lt {
+    float: left;
+}
+
+/* float left */
+.clear {
+    clear: both;
+}
+
+/* clear float */
+.pos-relative {
+    position: relative;
+}
+
+/* Position Relative */
+.pos-absolute {
+    position: absolute;
+}
+
+/* Position Absolute */
+.vertical-base {
+    vertical-align: baseline;
+}
+
+/* vertical align baseline */
+.vertical-top {
+    vertical-align: top;
+}
+
+/* vertical align top */
+nav.vertical ul li {
+    display: block;
+}
+
+/* vertical menu */
+nav.horizontal ul li {
+    display: inline-block;
+}
+
+/* horizontal menu */
+img {
+    max-width: 100%;
+}
+
+/*end reset*/
+body {
+    background: url(../images/bg.jpg) no-repeat #F5F5F5;
+}
+
+/*---start-wrap----*/
+.wrap {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*---start-header----*/
+.logo {
+    float: left;
+    padding: 10px;
+}
+
+.top-nav {
+    float: right;
+}
+
+.top-nav ul li {
+    display: inline-block;
+}
+
+.top-nav ul li a {
+    font-family: 'Glegoo', serif;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 45px 40px 27px 33px;
+    display: block;
+    font-weight: 400;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.top-nav ul li a:hover {
+    color: #545046;
+}
+
+/*---End-header----*/
+/*---start-wrap----*/
+/*---start-banner----*/
+.banner-img {
+    float: left;
+    width: 56%;
+    padding-top: 2.05em;
+}
+
+.banner-img img {
+
+
+}
+
+.banner-info {
+    float: right;
+    width: 44%;
+    padding-top: 12em;
+}
+
+.banner-info h1 {
+    font-family: 'Glegoo', serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.banner-info h2 {
+    font-family: 'Glegoo', serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    color: #FFF;
+}
+
+.banner-info p {
+    font-family: 'Glegoo', serif;
+    font-size: 0.875em;
+    line-height: 1.8em;
+    color: #FFF;
+}
+
+/*---End-banner----*/
+/*---start-content---*/
+.about {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+
+.about h3 {
+    font-family: 'Glegoo', serif;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    color: #545046;
+    padding: 0px 0px 6px 0px;
+}
+
+.about h4 {
+    font-family: 'Glegoo', serif;
+    font-size: 1.5em;
+    line-height: 1.8em;
+    color: #545046;
+    padding-top: 10px;
+}
+
+.para {
+    font-family: 'Glegoo', serif;
+    font-size: 0.875em;
+    line-height: 1.8em;
+    color: #545046;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.09);
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-family: 'Glegoo', serif;
+    font-size: 0.875em;
+    line-height: 1.8em;
+    color: #545046;
+    padding: 0px 0px 13px 0px;
+}
+
+.about p a {
+    font-family: 'Glegoo', serif;
+    font-size: 0.875em;
+    line-height: 1.8em;
+    color: #2B7D92;
+    padding: 0px 0px 0px 5px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.about p a:hover {
+    color: #2D2D2D;
+}
+
+.about img {
+    display: inline-block;
+    padding: 20px 0px 0px 0px;
+    -webkit-filter: grayscale(100%);
+    opacity: 5;
+    transition: all 300ms !important;
+    -webkit-transition: all 300ms !important;
+    -moz-transition: all 300ms !important;
+}
+
+/*----search-about-----*/
+.subgrid {
+    width: 48%;
+    margin: 0 auto;
+}
+
+.search-about {
+    background: #2D2D2D;
+    padding: 3.5em 0 4.5em 0;
+    text-align: center;
+}
+
+.search-about h3 {
+    font-family: 'Glegoo', serif;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    color: #FFF;
+    padding: 0 0 8px 0px;
+}
+
+.search-about span {
+    font-family: 'Glegoo', serif;
+    font-size: 1em;
+    color: #FFF;
+    padding: 0px 0px 15px 0px;
+    display: block;
+}
+
+.search-about input[type="text"] {
+    width: 41%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-family: 'Glegoo', serif;
+    color: #545046;
+    float: left;
+    border-left: 1px inset rgba(84, 80, 70, 0.13);
+}
+
+.search-about input[type="submit"] {
+    border: none;
+    outline: none;
+    background: #2B7D92;
+    font-family: 'Glegoo', serif;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    text-transform: uppercase;
+    float: left;
+}
+
+.search-about input[type="submit"]:hover {
+    background: #2D2D2D;
+}
+
+form {
+    margin: 0 auto;
+    background: #F5F5F5;
+    margin-top: 5px;
+}
+
+/*----grid3-----*/
+.grid3 {
+    padding: 50px 0px 75px 0px;
+}
+
+.grid3-header {
+    text-align: center;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.09);
+    width: 66%;
+    margin: 0 auto;
+    padding: 0px 0px 13px 0px;
+    margin-bottom: 20px;
+}
+
+.grid3-header h3 {
+    font-family: 'Glegoo', serif;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    padding: 20px 0px 5px 0px;
+    color: #545046;
+    padding: 0px 0px 12px 0px;
+}
+
+.grid3-header p {
+    font-family: 'Glegoo', serif;
+    font-size: 0.875em;
+    line-height: 1.8em;
+    color: #545046;
+}
+
+.grid3-left {
+    float: left;
+    width: 42%;
+}
+
+.grid3-left ul li {
+    display: inline-block;
+}
+
+.grid3-left ul li a {
+    padding: 9px;
+}
+
+.grid3-left h3 {
+    font-family: 'Glegoo', serif;
+    font-size: 1.5em;
+    line-height: 1.8em;
+    color: #545046;
+}
+
+.grid3-left p {
+    font-family: 'Glegoo', serif;
+    font-size: 0.875em;
+    line-height: 1.8em;
+    color: #545046;
+    width: 98%;
+    padding: 0.5em 0 1.5em 0;
+}
+
+.grid3-right {
+    float: right;
+    width: 57%;
+    background: #E6E6E6;
+    padding: 4px;
+    box-shadow: 0px 0px 10px rgba(201, 201, 201, 0.68);
+    border: 1px inset rgba(248, 248, 248, 0.19);
+}
+
+.grid3-right img {
+    display: block;
+    -webkit-filter: grayscale(100%);
+    opacity: 5;
+    transition: all 300ms !important;
+    -webkit-transition: all 300ms !important;
+    -moz-transition: all 300ms !important;
+    width: 100%;
+}
+
+.grid3-content {
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.button {
+    font-family: 'Glegoo', serif;
+    color: #FFFFFF;
+    margin-top: 12px;
+    background: #2B7D92;
+    display: inline-block;
+    padding: 15px 32px;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+}
+
+.button:hover {
+    background: #2D2D2D;
+}
+
+.grid3-left ul {
+    margin: 0px 0px 9px 0px;
+}
+
+/*----video-sub-grid-----*/
+.video-sub {
+    background: #2D2D2D;
+    padding: 3em 0 3.5em 0;
+}
+
+.video-sub-grid {
+    float: left;
+    width: 24.92%;
+    text-align: center;
+    border-left: 1px solid rgba(108, 108, 108, 0.12);
+}
+
+.video-sub-grid:first-child {
+    border: none;
+}
+
+.video-sub-grid h3, .video-sub-grid h4 {
+    font-family: 'Glegoo', serif;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: #6C6C6C;
+}
+
+.video-sub-grid h3 {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+/*---start-gallery----*/
+.Gallery {
+    padding: 50px 0px 60px 0px;
+}
+
+.gallery-header {
+    text-align: center;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.09);
+    width: 66%;
+    margin: 0 auto;
+    padding: 0px 0px 13px 0px;
+}
+
+.gallery-header h3 {
+    font-family: 'Glegoo', serif;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    padding: 20px 0px 5px 0px;
+    color: #545046;
+    padding: 0px 0px 12px 0px;
+}
+
+.gallery-header p {
+    font-family: 'Glegoo', serif;
+    font-size: 0.875em;
+    line-height: 1.8em;
+    color: #545046;
+}
+
+/*---gallery-grid----*/
+/* Common division block */
+.holder {
+    float: left;
+    margin: 20px 25.5px 0px 0px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(187, 255, 181, 0.26);
+    -webkit-transition: 0.5s Ease;
+    -moz-transition: 0.5s Ease;
+    -o-transition: 0.5s Ease;
+    transition: 0.5s Ease;
+    width: 31.77%;
+    border: 1px solid rgba(192, 192, 192, 0.28);
+}
+
+.last {
+    margin: 20px 0px 0px 0px;
+}
+
+.holder img {
+    display: block;
+}
+
+/* Caption and Light */
+.caption {
+    color: rgba(0, 0, 0, 0);
+    line-height: 100px;
+
+}
+
+.caption:hover {
+    border: 6px solid #E0E0E0;
+    color: rgb(255, 255, 255);
+    line-height: 500px;
+    box-shadow: 0px 0px 10px 7px #FFFFFF;
+}
+
+.caption > div {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    font-size: 30px;
+}
+
+/* Smooth Caption */
+.smooth {
+}
+
+.smooth:hover img {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #333333;
+}
+
+.go-left {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 0px;
+    right: -600px;
+    width: 360px;
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    -webkit-transition: 0.5s Ease;
+    -moz-transition: 0.5s Ease;
+    -o-transition: 0.5s Ease;
+    transition: 0.5s Ease;
+}
+
+.smooth:hover > .go-left {
+    right: 0px;
+}
+
+.go-top {
+    background-color: rgba(45, 45, 45, 0.46);
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 0px;
+    top: 600px;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 0;
+    overflow: hidden;
+    -webkit-transition: 0.5s Ease;
+    -moz-transition: 0.5s Ease;
+    -o-transition: 0.5s Ease;
+    transition: 0.5s Ease;
+    339
+
+}
+
+.smooth:hover > .go-top {
+    top: 0px;
+}
+
+.go-top p {
+    font-size: 12px;
+}
+
+.go-top h3 {
+    font-family: 'Glegoo', serif;
+    color: #fff;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin-top: 57px;
+    padding-bottom: 8px;
+}
+
+.go-top p {
+    font-family: 'Glegoo', serif;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    color: #FFF;
+}
+
+.go-top a {
+    font-family: 'Glegoo', serif;
+    color: #FFFFFF;
+    margin-top: 12px;
+    background: #2B7D92;
+    display: inline-block;
+    padding: 10px 22px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.go-top a:hover {
+    background: #2E2E2E;
+    color: #fff;
+}
+
+.last-grid {
+    margin-right: 0px;
+}
+
+.holder img {
+    -webkit-filter: grayscale(100%);
+    opacity: 5;
+    transition: all 300ms !important;
+    -webkit-transition: all 300ms !important;
+    -moz-transition: all 300ms !important;
+    width: 100%;
+}
+
+/*---start-gallery-sub-social----*/
+.gallery-sub-social {
+    background: #2D2D2D;
+    padding: 3em 0 3.5em 0;
+}
+
+.catch-me {
+    text-align: center;
+}
+
+.catch-me ul li {
+    display: inline-block;
+}
+
+.catch-me h3 {
+    font-family: 'Glegoo', serif;
+    color: #FFF;
+    font-size: 2.2em;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.catch-me p {
+    font-family: 'Glegoo', serif;
+    color: #FFF;
+    font-size: 0.875em;
+    line-height: 1.8em;
+    width: 68%;
+    margin: 0 auto;
+    padding-bottom: 22px;
+}
+
+.catch-me ul li a {
+    display: block;
+    margin: 0px 5px;
+}
+
+.catch-me ul li a img {
+    border-radius: 0.3em;
+    -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.catch-me ul li a img:hover {
+    opacity: 1;
+    -webkit-filter: grayscale(100%);
+    opacity: 5;
+    transition: all 300ms !important;
+    -webkit-transition: all 300ms !important;
+    -moz-transition: all 300ms !important;
+}
+
+/*---contact----*/
+.contact {
+    text-align: center;
+    padding: 70px 0px 85px 0px;
+}
+
+.contact h3 {
+    font-family: 'Glegoo', serif;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    padding: 20px 0px 5px 0px;
+    color: #545046;
+    padding: 0px 0px 12px 0px;
+}
+
+.contact input[type="text"] {
+    width: 40.6%;
+    display: inline-block;
+    padding: 10px;
+    margin: 20px 9px;
+    font-family: 'Glegoo', serif;
+    font-size: 0.875em;
+    color: #545046;
+    outline: none;
+    border: 1px inset rgba(84, 80, 70, 0.08);
+}
+
+.contact textarea {
+    width: 85%;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 120px;
+    font-family: 'Glegoo', serif;
+    font-size: 0.875em;
+    color: #545046;
+    outline: none;
+    border: 1px inset rgba(84, 80, 70, 0.08);
+}
+
+.contact p {
+    font-family: 'Glegoo', serif;
+    font-size: 0.875em;
+    line-height: 1.8em;
+    color: #545046;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.09);
+    padding-bottom: 35px;
+    margin-bottom: 20px;
+}
+
+.contact input[type="submit"] {
+    font-family: 'Glegoo', serif;
+    font-size: 0.875em;
+    color: #FFF;
+    margin-top: 12px;
+    background: #2B7D92;
+    display: block;
+    padding: 12px 0px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    border: none;
+    width: 86.9%;
+    margin: 0 auto;
+    outline: none;
+}
+
+.contact input[type="submit"]:hover {
+    background: #2D2D2D;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/*---start-copy-right---*/
+.copy-right {
+    text-align: center;
+    background: #2D2D2D;
+    padding: 1em 0;
+}
+
+.copy-right p {
+    font-family: 'Glegoo', serif;
+    color: #FFF;
+    font-size: 1em;
+    line-height: 1.8em;
+    width: 68%;
+    margin: 0 auto;
+}
+
+.copy-right p a {
+    color: #FFF;
+    transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+}
+
+.copy-right p a:hover {
+    color: #2B7D92;
+}
+
+/*** move top **/
+#toTop {
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    border: none;
+    text-indent: 100%;
+    background: url(../images/arrow_up.png) no-repeat right top;
+}
+
+#toTopHover {
+    width: 48px;
+    height: 48px;
+    display: block;
+    overflow: hidden;
+    float: right;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#toTop:active, #toTop:focus {
+    outline: none;
+}
+
+/*----responsive-design-----*/
+@media only screen and (max-width: 1366px) and (min-width: 1280px) {
+    .wrap {
+        width: 95%;
+    }
+
+    .subgrid {
+        width: 58%;
+        margin: 0 auto;
+    }
+
+    .grid3-content {
+        width: 76%;
+    }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 1024px) {
+    body {
+        background-size: 100% 16.4%;
+    }
+
+    .wrap {
+        width: 95%;
+    }
+
+    .subgrid {
+        width: 61%;
+        margin: 0 auto;
+    }
+
+    .grid3-content {
+        width: 81%;
+    }
+
+    .holder {
+        width: 31.7%;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    body {
+        background-size: 100% 16%;
+    }
+
+    .wrap {
+        width: 95%;
+    }
+
+    .subgrid {
+        width: 77%;
+        margin: 0 auto;
+    }
+
+    .grid3-content {
+        width: 81%;
+    }
+
+    .holder {
+        width: 31.3%;
+    }
+
+    .banner {
+        padding-top: 5.1em;
+    }
+
+    .banner-info {
+        padding-top: 3em;
+    }
+
+    .grid3-right {
+        float: right;
+        width: 56%;
+        margin-top: 3em;
+    }
+
+    .go-top h3 {
+        margin-top: 14px;
+    }
+
+    .contact input[type="text"] {
+        width: 40.2%;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 640px) {
+    .wrap {
+        width: 95%;
+    }
+
+    .subgrid {
+        width: 77%;
+        margin: 0 auto;
+    }
+
+    .grid3-content {
+        width: 81%;
+    }
+
+    .holder {
+        width: 30.6%;
+    }
+
+    .banner {
+        padding-top: 2em;
+    }
+
+    .banner-info {
+        padding-top: 0em;
+    }
+
+    .grid3-right {
+        float: right;
+        width: 56%;
+        margin-top: 3em;
+    }
+
+    .go-top h3 {
+        margin-top: 14px;
+    }
+
+    .contact input[type="text"] {
+        width: 39.5%;
+    }
+
+    .top-nav ul li a {
+        padding: 45px 20px 0px 20px;
+    }
+
+    .banner-img img {
+        padding-top: 1.5em;
+    }
+
+    .search-about input[type="text"] {
+        width: 38%;
+    }
+
+    .about {
+        width: 81%;
+    }
+
+    .subgrid {
+        width: 80%;
+    }
+
+    .video-sub-grid {
+        width: 24.8%;
+    }
+
+    .go-top h3 {
+        margin-top: 15px;
+        font-size: 1em;
+    }
+
+    .go-top p {
+        display: none;
+    }
+
+    .contact input[type="submit"] {
+        width: 88%;
+    }
+
+    body {
+        background-size: 100% 13%;
+    }
+}

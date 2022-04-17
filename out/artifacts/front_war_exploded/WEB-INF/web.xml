@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <servlet>
+        <servlet-name>Fy_Servlet</servlet-name>
+        <servlet-class>servlet.control.Fy_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Fy_Servlet</servlet-name>
+        <url-pattern>/searchFy</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>readTestServlet</servlet-name>
+        <servlet-class>servlet.control.Example7_10_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>readTestServlet</servlet-name>
+        <url-pattern>/readTestServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>endTestServlet</servlet-name>
+        <servlet-class>servlet.control.Example7_10_End_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>endTestServlet</servlet-name>
+        <url-pattern>/endTestServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>uploadServlet</servlet-name>
+        <servlet-class>servlet.control.upload_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>uploadServlet</servlet-name>
+        <url-pattern>/uploadServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

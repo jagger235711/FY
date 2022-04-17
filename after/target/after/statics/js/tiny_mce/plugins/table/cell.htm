@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{#table_dlg.cell_title}</title>
+    <script src="../../tiny_mce_popup.js" type="text/javascript"></script>
+    <script src="../../utils/mctabs.js" type="text/javascript"></script>
+    <script src="../../utils/form_utils.js" type="text/javascript"></script>
+    <script src="../../utils/validate.js" type="text/javascript"></script>
+    <script src="../../utils/editable_selects.js" type="text/javascript"></script>
+    <script src="js/cell.js" type="text/javascript"></script>
+    <link href="css/cell.css" rel="stylesheet" type="text/css"/>
+</head>
+<body id="tablecell" role="application" style="display: none">
+<form action="#" onsubmit="updateAction();return false;">
+    <div class="tabs">
+        <ul>
+            <li aria-controls="general_panel" class="current" id="general_tab"><span><a
+                    href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#table_dlg.general_tab}</a></span>
+            </li>
+            <li aria-controls="advanced_panel" id="advanced_tab"><span><a
+                    href="javascript:mcTabs.displayTab('advanced_tab','advanced_panel');" onmousedown="return false;">{#table_dlg.advanced_tab}</a></span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="panel_wrapper">
+        <div class="panel current" id="general_panel">
+            <fieldset>
+                <legend>{#table_dlg.general_props}</legend>
+
+                <table border="0" cellpadding="4" cellspacing="0" role="presentation">
+                    <tr>
+                        <td><label for="align">{#table_dlg.align}</label></td>
+                        <td>
+                            <select class="mceFocus" id="align" name="align">
+                                <option value="">{#not_set}</option>
+                                <option value="center">{#table_dlg.align_middle}</option>
+                                <option value="left">{#table_dlg.align_left}</option>
+                                <option value="right">{#table_dlg.align_right}</option>
+                            </select>
+                        </td>
+
+                        <td><label for="celltype">{#table_dlg.cell_type}</label></td>
+                        <td>
+                            <select id="celltype" name="celltype">
+                                <option value="td">{#table_dlg.td}</option>
+                                <option value="th">{#table_dlg.th}</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="valign">{#table_dlg.valign}</label></td>
+                        <td>
+                            <select id="valign" name="valign">
+                                <option value="">{#not_set}</option>
+                                <option value="top">{#table_dlg.align_top}</option>
+                                <option value="middle">{#table_dlg.align_middle}</option>
+                                <option value="bottom">{#table_dlg.align_bottom}</option>
+                            </select>
+                        </td>
+
+                        <td><label for="scope">{#table_dlg.scope}</label></td>
+                        <td>
+                            <select id="scope" name="scope">
+                                <option value="">{#not_set}</option>
+                                <option value="col">{#table.col}</option>
+                                <option value="row">{#table.row}</option>
+                                <option value="rowgroup">{#table_dlg.rowgroup}</option>
+                                <option value="colgroup">{#table_dlg.colgroup}</option>
+                            </select>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td><label for="width">{#table_dlg.width}</label></td>
+                        <td><input class="size" id="width" maxlength="7" name="width" onchange="changedSize();" size="7"
+                                   type="text" value=""/></td>
+
+                        <td><label for="height">{#table_dlg.height}</label></td>
+                        <td><input class="size" id="height" maxlength="7" name="height" onchange="changedSize();" size="7"
+                                   type="text" value=""/></td>
+                    </tr>
+
+                    <tr id="styleSelectRow">
+                        <td><label for="class">{#class_name}</label></td>
+                        <td colspan="3">
+                            <select class="mceEditableSelect" id="class" name="class">
+                                <option selected="selected" value="">{#not_set}</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+
+        <div class="panel" id="advanced_panel">
+            <fieldset>
+                <legend>{#table_dlg.advanced_props}</legend>
+
+                <table border="0" cellpadding="0" cellspacing="4" role="presentation">
+                    <tr>
+                        <td class="column1"><label for="id">{#table_dlg.id}</label></td>
+                        <td><input id="id" name="id" style="width: 200px" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="style">{#table_dlg.style}</label></td>
+                        <td><input id="style" name="style" onchange="changedStyle();" style="width: 200px;" type="text"
+                                   value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="dir">{#table_dlg.langdir}</label></td>
+                        <td>
+                            <select id="dir" name="dir" style="width: 200px">
+                                <option value="">{#not_set}</option>
+                                <option value="ltr">{#table_dlg.ltr}</option>
+                                <option value="rtl">{#table_dlg.rtl}</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="lang">{#table_dlg.langcode}</label></td>
+                        <td>
+                            <input id="lang" name="lang" style="width: 200px" type="text" value=""/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="backgroundimage">{#table_dlg.bgimage}</label></td>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                <tr>
+                                    <td><input id="backgroundimage" name="backgroundimage" onchange="changedBackgroundImage();" style="width: 200px"
+                                               type="text" value=""/></td>
+                                    <td id="backgroundimagebrowsercontainer">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr aria-labelledby="bordercolor_label" role="group">
+                        <td class="column1"><label for="bordercolor"
+                                                   id="bordercolor_label">{#table_dlg.bordercolor}</label></td>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                <tr>
+                                    <td><input id="bordercolor" name="bordercolor" onchange="updateColor('bordercolor_pick','bordercolor');changedColor();" size="9" type="text"
+                                               value=""/>
+                                    </td>
+                                    <td id="bordercolor_pickcontainer">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr aria-labelledby="bgcolor_label" role="group">
+                        <td class="column1"><label for="bgcolor" id="bgcolor_label">{#table_dlg.bgcolor}</label></td>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                <tr>
+                                    <td><input id="bgcolor" name="bgcolor" onchange="updateColor('bgcolor_pick','bgcolor');changedColor();" size="9" type="text"
+                                               value=""/></td>
+                                    <td id="bgcolor_pickcontainer">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="mceActionPanel">
+        <div>
+            <select id="action" name="action">
+                <option value="cell">{#table_dlg.cell_cell}</option>
+                <option value="row">{#table_dlg.cell_row}</option>
+                <option value="col">{#table_dlg.cell_col}</option>
+                <option value="all">{#table_dlg.cell_all}</option>
+            </select>
+        </div>
+
+        <input id="insert" name="insert" type="submit" value="{#update}"/>
+        <input id="cancel" name="cancel" onclick="tinyMCEPopup.close();" type="button" value="{#cancel}"/>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{#example_dlg.title}</title>
+    <script src="../../tiny_mce_popup.js" type="text/javascript"></script>
+    <script src="js/dialog.js" type="text/javascript"></script>
+</head>
+<body>
+
+<form action="#" onsubmit="ExampleDialog.insert();return false;">
+    <p>Here is a example dialog.</p>
+    <p>Selected text: <input class="text" id="someval" name="someval" type="text"/></p>
+    <p>Custom arg: <input class="text" id="somearg" name="somearg" type="text"/></p>
+
+    <div class="mceActionPanel">
+        <input id="insert" name="insert" onclick="ExampleDialog.insert();" type="button" value="{#insert}"/>
+        <input id="cancel" name="cancel" onclick="tinyMCEPopup.close();" type="button" value="{#cancel}"/>
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+.num-item {
+    width: auto;
+    margin: 0 0.2rem;
+}
+
+.num-item .b {
+    font-size: 0.5rem;
+}
+
+.num-item {
+    display: inline-block;
+    width: 23%;
+    vertical-align: top;
+}
+
+.num-item .b {
+    font-family: impact;
+    font-size: 92px;
+    line-height: 1.3;
+    color: #333;
+}
+
+.num-item .h18 {
+    color: #333;
+    font-family: Î¢ÈíÑÅºÚ;
+}

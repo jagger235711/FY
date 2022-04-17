@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{#advlink_dlg.title}</title>
+    <script src="../../tiny_mce_popup.js" type="text/javascript"></script>
+    <script src="../../utils/mctabs.js" type="text/javascript"></script>
+    <script src="../../utils/form_utils.js" type="text/javascript"></script>
+    <script src="../../utils/validate.js" type="text/javascript"></script>
+    <script src="js/advlink.js" type="text/javascript"></script>
+    <link href="css/advlink.css" rel="stylesheet" type="text/css"/>
+</head>
+<body aria-labelledby="app_label" id="advlink"
+      onload="javascript:mcTabs.displayTab('general_tab','general_panel', true);"
+      role="application" style="display: none">
+<span class="mceVoiceLabel" id="app_label" style="display:none;">{#advlink_dlg.title}</span>
+<form action="#" onsubmit="insertAction();return false;">
+    <div class="tabs" role="presentation">
+        <ul>
+            <li aria-controls="general_panel" class="current" id="general_tab"><span><a
+                    href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#advlink_dlg.general_tab}</a></span>
+            </li>
+            <li aria-controls="popup_panel" id="popup_tab"><span><a
+                    href="javascript:mcTabs.displayTab('popup_tab','popup_panel');" onmousedown="return false;">{#advlink_dlg.popup_tab}</a></span>
+            </li>
+            <li aria-controls="events_panel" id="events_tab"><span><a
+                    href="javascript:mcTabs.displayTab('events_tab','events_panel');" onmousedown="return false;">{#advlink_dlg.events_tab}</a></span>
+            </li>
+            <li aria-controls="advanced_panel" id="advanced_tab"><span><a
+                    href="javascript:mcTabs.displayTab('advanced_tab','advanced_panel');" onmousedown="return false;">{#advlink_dlg.advanced_tab}</a></span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="panel_wrapper" role="presentation">
+        <div class="panel current" id="general_panel">
+            <fieldset>
+                <legend>{#advlink_dlg.general_props}</legend>
+
+                <table border="0" cellpadding="4" cellspacing="0" role="presentation">
+                    <tr>
+                        <td class="nowrap"><label for="href" id="hreflabel">{#advlink_dlg.url}</label></td>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td><input aria-required="true" class="mceFocus" id="href" name="href"
+                                               onchange="selectByValue(this.form,'linklisthref',this.value);"
+                                               type="text"
+                                               value=""/></td>
+                                    <td id="hrefbrowsercontainer">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr id="linklisthrefrow">
+                        <td class="column1"><label for="linklisthref">{#advlink_dlg.list}</label></td>
+                        <td colspan="2" id="linklisthrefcontainer"><select id="linklisthref">
+                            <option value=""></option>
+                        </select></td>
+                    </tr>
+                    <tr id="anchorlistrow">
+                        <td class="column1"><label for="anchorlist">{#advlink_dlg.anchor_names}</label></td>
+                        <td colspan="2" id="anchorlistcontainer"><select id="anchorlist">
+                            <option value=""></option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="targetlist" id="targetlistlabel">{#advlink_dlg.target}</label></td>
+                        <td id="targetlistcontainer"><select id="targetlist">
+                            <option value=""></option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td class="nowrap"><label for="title" id="titlelabel">{#advlink_dlg.titlefield}</label></td>
+                        <td><input id="title" name="title" type="text" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="classlist" id="classlabel">{#class_name}</label></td>
+                        <td>
+                            <select id="classlist" name="classlist" onchange="changeClass();">
+                                <option selected="selected" value="">{#not_set}</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+
+        <div class="panel" id="popup_panel">
+            <fieldset>
+                <legend>{#advlink_dlg.popup_props}</legend>
+
+                <input class="radio" id="ispopup" name="ispopup"
+                       onclick="setPopupControlsDisabled(!this.checked);buildOnClick();"
+                       type="checkbox"/>
+                <label for="ispopup" id="ispopuplabel">{#advlink_dlg.popup}</label>
+
+                <table border="0" cellpadding="0" cellspacing="4" role="presentation">
+                    <tr>
+                        <td class="nowrap"><label for="popupurl">{#advlink_dlg.popup_url}</label>&nbsp;</td>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td><input id="popupurl" name="popupurl" onchange="buildOnClick();" type="text"
+                                               value=""/></td>
+                                    <td id="popupurlbrowsercontainer">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nowrap"><label for="popupname">{#advlink_dlg.popup_name}</label>&nbsp;</td>
+                        <td><input id="popupname" name="popupname" onchange="buildOnClick();" type="text" value=""/>
+                        </td>
+                    </tr>
+                    <tr aria-labelledby="popup_size_label" role="group">
+                        <td class="nowrap"><label id="popup_size_label">{#advlink_dlg.popup_size}</label>&nbsp;</td>
+                        <td class="nowrap">
+                            <span id="width_voiceLabel" style="display:none">{#advlink_dlg.width}</span>
+                            <input aria-labelledby="width_voiceLabel" id="popupwidth" name="popupwidth"
+                                   onchange="buildOnClick();" type="text"
+                                   value=""/> x
+                            <span id="height_voiceLabel" style="display:none">{#advlink_dlg.height}</span>
+                            <input aria-labelledby="height_voiceLabel" id="popupheight" name="popupheight"
+                                   onchange="buildOnClick();" type="text"
+                                   value=""/> px
+                        </td>
+                    </tr>
+                    <tr aria-labelledby="popup_position_label center_hint" role="group">
+                        <td class="nowrap" id="labelleft"><label
+                                id="popup_position_label">{#advlink_dlg.popup_position}</label>&nbsp;
+                        </td>
+                        <td class="nowrap">
+                            <span id="x_voiceLabel" style="display:none">X</span>
+                            <input aria-labelledby="x_voiceLabel" id="popupleft" name="popupleft"
+                                   onchange="buildOnClick();" type="text"
+                                   value=""/> /
+                            <span id="y_voiceLabel" style="display:none">Y</span>
+                            <input aria-labelledby="y_voiceLabel" id="popuptop" name="popuptop"
+                                   onchange="buildOnClick();" type="text"
+                                   value=""/> <span id="center_hint">(c /c = center)</span>
+                        </td>
+                    </tr>
+                </table>
+
+                <fieldset>
+                    <legend>{#advlink_dlg.popup_opts}</legend>
+
+                    <table border="0" cellpadding="0" cellspacing="4" role="presentation">
+                        <tr>
+                            <td><input class="checkbox" id="popuplocation" name="popuplocation"
+                                       onchange="buildOnClick();"
+                                       type="checkbox"/></td>
+                            <td class="nowrap"><label for="popuplocation" id="popuplocationlabel">{#advlink_dlg.popup_location}</label>
+                            </td>
+                            <td><input class="checkbox" id="popupscrollbars" name="popupscrollbars"
+                                       onchange="buildOnClick();"
+                                       type="checkbox"/></td>
+                            <td class="nowrap"><label for="popupscrollbars" id="popupscrollbarslabel">{#advlink_dlg.popup_scrollbars}</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="checkbox" id="popupmenubar" name="popupmenubar" onchange="buildOnClick();"
+                                       type="checkbox"/></td>
+                            <td class="nowrap"><label for="popupmenubar" id="popupmenubarlabel">{#advlink_dlg.popup_menubar}</label>
+                            </td>
+                            <td><input class="checkbox" id="popupresizable" name="popupresizable"
+                                       onchange="buildOnClick();"
+                                       type="checkbox"/></td>
+                            <td class="nowrap"><label for="popupresizable" id="popupresizablelabel">{#advlink_dlg.popup_resizable}</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="checkbox" id="popuptoolbar" name="popuptoolbar" onchange="buildOnClick();"
+                                       type="checkbox"/></td>
+                            <td class="nowrap"><label for="popuptoolbar" id="popuptoolbarlabel">{#advlink_dlg.popup_toolbar}</label>
+                            </td>
+                            <td><input class="checkbox" id="popupdependent" name="popupdependent"
+                                       onchange="buildOnClick();"
+                                       type="checkbox"/></td>
+                            <td class="nowrap"><label for="popupdependent" id="popupdependentlabel">{#advlink_dlg.popup_dependent}</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="checkbox" id="popupstatus" name="popupstatus" onchange="buildOnClick();"
+                                       type="checkbox"/></td>
+                            <td class="nowrap"><label for="popupstatus" id="popupstatuslabel">{#advlink_dlg.popup_statusbar}</label>
+                            </td>
+                            <td><input checked="checked" class="checkbox" id="popupreturn" name="popupreturn"
+                                       onchange="buildOnClick();" type="checkbox"/></td>
+                            <td class="nowrap"><label for="popupreturn" id="popupreturnlabel">{#advlink_dlg.popup_return}</label>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </fieldset>
+        </div>
+
+        <div class="panel" id="advanced_panel">
+            <fieldset>
+                <legend>{#advlink_dlg.advanced_props}</legend>
+
+                <table border="0" cellpadding="0" cellspacing="4" role="presentation">
+                    <tr>
+                        <td class="column1"><label for="id" id="idlabel">{#advlink_dlg.id}</label></td>
+                        <td><input id="id" name="id" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="style" id="stylelabel">{#advlink_dlg.style}</label></td>
+                        <td><input id="style" name="style" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="classes" id="classeslabel">{#advlink_dlg.classes}</label></td>
+                        <td><input id="classes" name="classes"
+                                   onchange="selectByValue(this.form,'classlist',this.value,true);" type="text"
+                                   value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="target" id="targetlabel">{#advlink_dlg.target_name}</label></td>
+                        <td><input id="target" name="target"
+                                   onchange="selectByValue(this.form,'targetlist',this.value,true);" type="text"
+                                   value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="dir" id="dirlabel">{#advlink_dlg.langdir}</label></td>
+                        <td>
+                            <select id="dir" name="dir">
+                                <option value="">{#not_set}</option>
+                                <option value="ltr">{#advlink_dlg.ltr}</option>
+                                <option value="rtl">{#advlink_dlg.rtl}</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="hreflang" id="hreflanglabel">{#advlink_dlg.target_langcode}</label></td>
+                        <td><input id="hreflang" name="hreflang" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="lang" id="langlabel">{#advlink_dlg.langcode}</label></td>
+                        <td>
+                            <input id="lang" name="lang" type="text" value=""/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="charset" id="charsetlabel">{#advlink_dlg.encoding}</label></td>
+                        <td><input id="charset" name="charset" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="type" id="typelabel">{#advlink_dlg.mime}</label></td>
+                        <td><input id="type" name="type" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="rel" id="rellabel">{#advlink_dlg.rel}</label></td>
+                        <td><select id="rel" name="rel">
+                            <option value="">{#not_set}</option>
+                            <option value="lightbox">Lightbox</option>
+                            <option value="alternate">Alternate</option>
+                            <option value="designates">Designates</option>
+                            <option value="stylesheet">Stylesheet</option>
+                            <option value="start">Start</option>
+                            <option value="next">Next</option>
+                            <option value="prev">Prev</option>
+                            <option value="contents">Contents</option>
+                            <option value="index">Index</option>
+                            <option value="glossary">Glossary</option>
+                            <option value="copyright">Copyright</option>
+                            <option value="chapter">Chapter</option>
+                            <option value="subsection">Subsection</option>
+                            <option value="appendix">Appendix</option>
+                            <option value="help">Help</option>
+                            <option value="bookmark">Bookmark</option>
+                            <option value="nofollow">No Follow</option>
+                            <option value="tag">Tag</option>
+                        </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="rev" id="revlabel">{#advlink_dlg.rev}</label></td>
+                        <td><select id="rev" name="rev">
+                            <option value="">{#not_set}</option>
+                            <option value="alternate">Alternate</option>
+                            <option value="designates">Designates</option>
+                            <option value="stylesheet">Stylesheet</option>
+                            <option value="start">Start</option>
+                            <option value="next">Next</option>
+                            <option value="prev">Prev</option>
+                            <option value="contents">Contents</option>
+                            <option value="index">Index</option>
+                            <option value="glossary">Glossary</option>
+                            <option value="copyright">Copyright</option>
+                            <option value="chapter">Chapter</option>
+                            <option value="subsection">Subsection</option>
+                            <option value="appendix">Appendix</option>
+                            <option value="help">Help</option>
+                            <option value="bookmark">Bookmark</option>
+                        </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="tabindex" id="tabindexlabel">{#advlink_dlg.tabindex}</label></td>
+                        <td><input id="tabindex" name="tabindex" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="accesskey" id="accesskeylabel">{#advlink_dlg.accesskey}</label></td>
+                        <td><input id="accesskey" name="accesskey" type="text" value=""/></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+
+        <div class="panel" id="events_panel">
+            <fieldset>
+                <legend>{#advlink_dlg.event_props}</legend>
+
+                <table border="0" cellpadding="0" cellspacing="4" role="presentation">
+                    <tr>
+                        <td class="column1"><label for="onfocus">onfocus</label></td>
+                        <td><input id="onfocus" name="onfocus" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="onblur">onblur</label></td>
+                        <td><input id="onblur" name="onblur" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="onclick">onclick</label></td>
+                        <td><input id="onclick" name="onclick" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="ondblclick">ondblclick</label></td>
+                        <td><input id="ondblclick" name="ondblclick" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="onmousedown">onmousedown</label></td>
+                        <td><input id="onmousedown" name="onmousedown" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="onmouseup">onmouseup</label></td>
+                        <td><input id="onmouseup" name="onmouseup" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="onmouseover">onmouseover</label></td>
+                        <td><input id="onmouseover" name="onmouseover" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="onmousemove">onmousemove</label></td>
+                        <td><input id="onmousemove" name="onmousemove" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="onmouseout">onmouseout</label></td>
+                        <td><input id="onmouseout" name="onmouseout" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="onkeypress">onkeypress</label></td>
+                        <td><input id="onkeypress" name="onkeypress" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="onkeydown">onkeydown</label></td>
+                        <td><input id="onkeydown" name="onkeydown" type="text" value=""/></td>
+                    </tr>
+
+                    <tr>
+                        <td class="column1"><label for="onkeyup">onkeyup</label></td>
+                        <td><input id="onkeyup" name="onkeyup" type="text" value=""/></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="mceActionPanel">
+        <input id="insert" name="insert" type="submit" value="{#insert}"/>
+        <input id="cancel" name="cancel" onclick="tinyMCEPopup.close();" type="button" value="{#cancel}"/>
+    </div>
+</form>
+</body>
+</html>
