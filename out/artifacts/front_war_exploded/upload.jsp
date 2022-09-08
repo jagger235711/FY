@@ -33,7 +33,8 @@
                         <option value="1">黑龙江省</option>
                         <option value="2">吉林省</option>
                         <option value="3">辽宁省</option>
-                    </select>*</td>
+                    </select>*
+                    </td>
                 </tr>
 
                 <tr>
@@ -63,7 +64,8 @@
                         <option value="3">2011(第三批)</option>
                         <option value="4">2014(第四批)</option>
                         <option value="5">2021(第五批)</option>
-                    </select>*</td>
+                    </select>*
+                    </td>
                 </tr>
                 <tr>
                     <td>类型:</td>
@@ -71,7 +73,8 @@
                         <option selected="selected" disabled="disabled" style='display: none' value=''></option>
                         <option value="1">新增项目</option>
                         <option value="2">扩展项目</option>
-                    </select>*</td>
+                    </select>*
+                    </td>
                 </tr>
             </table>
             <table>

@@ -14,14 +14,14 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/move-top.js"></script>
     <script type="text/javascript" src="./js/easing.js"></script>
-<%--    <script type="text/javascript">--%>
-<%--        jQuery(document).ready(function ($) {--%>
-<%--            $(".scroll").click(function (event) {--%>
-<%--                event.preventDefault();--%>
-<%--                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1200);--%>
-<%--            });--%>
-<%--        });--%>
-<%--    </script>--%>
+    <%--    <script type="text/javascript">--%>
+    <%--        jQuery(document).ready(function ($) {--%>
+    <%--            $(".scroll").click(function (event) {--%>
+    <%--                event.preventDefault();--%>
+    <%--                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1200);--%>
+    <%--            });--%>
+    <%--        });--%>
+    <%--    </script>--%>
 </head>
 <body>
 <!---start-wrap---->
@@ -40,9 +40,10 @@
                 <li><A href="study.jsp" target="body" class="scroll"> 非遗大学习 </A></li>
                 <li><A href="upload.jsp" target="body" class="scroll"> 上传非遗 </A></li>
                 <li><A href="browse.jsp" target="body" class="scroll"> 浏览非遗 </A></li>
-<%--                <li><A href="message.jsp" target="body" class="scroll"> 留言板 </A></li>--%>
-<%--                <li><A href="backstage.jsp" target="body" class="scroll"> 管理员后台 </A></li>--%>
-                <li><A href="http://localhost:8082/hrmapp_war_exploded/main" target="_top" class="scroll"> 管理员后台 </A></li>
+                <%--                <li><A href="message.jsp" target="body" class="scroll"> 留言板 </A></li>--%>
+                <%--                <li><A href="backstage.jsp" target="body" class="scroll"> 管理员后台 </A></li>--%>
+                <li><A href="http://localhost:8081/hrmapp_war_exploded/main" target="_top" class="scroll"> 管理员后台 </A>
+                </li>
             </ul>
         </div>
         <div class="clear"></div>

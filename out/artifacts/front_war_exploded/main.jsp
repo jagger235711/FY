@@ -138,12 +138,16 @@
                 <div id="title"><a href="#">更多</a></div>
                 <div id="scrollBox">
                     <ul>
-                        <li><a href="https://www.ihchina.cn/news_2_details/24581.html">财政部 文化和旅游部关于印发《国家非物质文化遗产保护资金管理办法》的通知（财教〔2021〕314号）</a></li>
-                        <li><a href="https://www.ihchina.cn/news_2_details/24557.html">河北省非物质文化遗产保护中心关于公布2021年度河北省非遗优秀实践案例的公告</a></li>
-                        <li><a href="https://www.ihchina.cn/news_2_details/24522.html">宁夏回族自治区文化和旅游厅关于公布第六批自治区级非物质文化遗产代表性项目代表性传承人的通知</a></li>
-                        <li><a href="https://www.ihchina.cn/news_2_details/24503.html">辽宁省文化和旅游厅关于印发《辽宁省“十四五”非物质文化遗产保护规划》的通知</a></li>
-<%--                        <li><a href="#">5:jquery学习</a></li>--%>
-<%--                        <li><a href="#">6:htmll5和css3学习</a></li>--%>
+                        <li><a href="https://www.ihchina.cn/news_2_details/24581.html">财政部
+                            文化和旅游部关于印发《国家非物质文化遗产保护资金管理办法》的通知（财教〔2021〕314号）</a></li>
+                        <li><a href="https://www.ihchina.cn/news_2_details/24557.html">河北省非物质文化遗产保护中心关于公布2021年度河北省非遗优秀实践案例的公告</a>
+                        </li>
+                        <li><a href="https://www.ihchina.cn/news_2_details/24522.html">宁夏回族自治区文化和旅游厅关于公布第六批自治区级非物质文化遗产代表性项目代表性传承人的通知</a>
+                        </li>
+                        <li><a href="https://www.ihchina.cn/news_2_details/24503.html">辽宁省文化和旅游厅关于印发《辽宁省“十四五”非物质文化遗产保护规划》的通知</a>
+                        </li>
+                        <%--                        <li><a href="#">5:jquery学习</a></li>--%>
+                        <%--                        <li><a href="#">6:htmll5和css3学习</a></li>--%>
                     </ul>
                 </div>
             </div>

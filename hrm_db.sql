@@ -17,6 +17,10 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
+DROP database IF EXISTS `hrm_db`;
+create DATABASE hrm_db;
+use hrm_db;
+
 -- ----------------------------
 -- Table structure for dept_inf
 -- ----------------------------

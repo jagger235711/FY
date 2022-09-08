@@ -25,14 +25,14 @@
         </tr>
         <tr>
             <td><select name="select-province">
-<%--                <option>所属地区</option>--%>
+                <%--                <option>所属地区</option>--%>
                 <option value="0">全部</option>
                 <option value="1">黑龙江省</option>
                 <option value="2">吉林省</option>
                 <option value="3">辽宁省</option>
             </select></td>
             <td><select name="select-publishTime">
-<%--                <option>公布时间</option>--%>
+                <%--                <option>公布时间</option>--%>
                 <option value="0">全部</option>
                 <option value="1">2006(第一批)</option>
                 <option value="2">2008(第二批)</option>
@@ -41,7 +41,7 @@
                 <option value="5">2021(第五批)</option>
             </select></td>
             <td><select name="select-native">
-<%--                <option>类别</option>--%>
+                <%--                <option>类别</option>--%>
                 <option value="0">全部</option>
                 <option value="1">民间文学</option>
                 <option value="2">传统音乐</option>
@@ -56,12 +56,12 @@
             </select>
             </td>
             <td><select name="select-type">
-<%--                <option>类型</option>--%>
+                <%--                <option>类型</option>--%>
                 <option value="0">全部</option>
                 <option value="1">新增项目</option>
                 <option value="2">扩展项目</option>
             </select></td>
-            <td><input type="text" name="select-name" ></td>
+            <td><input type="text" name="select-name"></td>
             <td>
                 <button type="submit" id="submit">搜索</button>
             </td>
@@ -84,9 +84,9 @@
             out.print("</tr>");
         }
         try {
-            int k=0;
+            int k = 0;
             for (int i = 0; i < table.length; i++) {
-                if(!table[i][9].equals("0")){
+                if (!table[i][9].equals("0")) {
                     out.print("<tr>");
                     for (int j = 0; j < columnName.length; j++) {
                         out.print("<td>" + table[i][j] + "</td>");
@@ -99,7 +99,7 @@
 
 //        out.println("全部记录数" + table.length); //全部记录数
             out.println("全部记录数" + k); //全部记录数
-        }catch (Exception e){
+        } catch (Exception e) {
             out.print(e);
             out.print("输入搜索条件");
         }
