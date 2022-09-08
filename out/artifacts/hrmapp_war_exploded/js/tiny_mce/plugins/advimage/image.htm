@@ -38,7 +38,8 @@
                         <td colspan="2">
                             <table border="0" cellpadding="0" cellspacing="0" role="presentation">
                                 <tr>
-                                    <td><input aria-required="true" class="mceFocus" id="src" name="src" onchange="ImageDialog.showPreviewImage(this.value);"
+                                    <td><input aria-required="true" class="mceFocus" id="src" name="src"
+                                               onchange="ImageDialog.showPreviewImage(this.value);"
                                                type="text"
                                                value=""/></td>
                                     <td id="srcbrowsercontainer">&nbsp;</td>
@@ -107,10 +108,12 @@
                         <td class="column1"><label for="width" id="widthlabel">{#advimage_dlg.dimensions}</label></td>
                         <td class="nowrap">
                             <span id="width_voiceLabel" style="display:none">{#advimage_dlg.width}</span>
-                            <input aria-labelledby="width_voiceLabel" class="size" id="width" maxlength="5" name="width" onchange="ImageDialog.changeHeight();" size="5"
+                            <input aria-labelledby="width_voiceLabel" class="size" id="width" maxlength="5" name="width"
+                                   onchange="ImageDialog.changeHeight();" size="5"
                                    type="text" value=""/> x
                             <span id="height_voiceLabel" style="display:none">{#advimage_dlg.height}</span>
-                            <input aria-labelledby="height_voiceLabel" class="size" id="height" maxlength="5" name="height" onchange="ImageDialog.changeWidth();" size="5"
+                            <input aria-labelledby="height_voiceLabel" class="size" id="height" maxlength="5"
+                                   name="height" onchange="ImageDialog.changeWidth();" size="5"
                                    type="text" value=""/> px
                         </td>
                     </tr>
@@ -130,7 +133,9 @@
 
                     <tr>
                         <td class="column1"><label for="vspace" id="vspacelabel">{#advimage_dlg.vspace}</label></td>
-                        <td><input class="number" id="vspace" maxlength="3" name="vspace" onblur="ImageDialog.updateStyle('vspace');ImageDialog.changeAppearance();" onchange="ImageDialog.updateStyle('vspace');ImageDialog.changeAppearance();" size="3"
+                        <td><input class="number" id="vspace" maxlength="3" name="vspace"
+                                   onblur="ImageDialog.updateStyle('vspace');ImageDialog.changeAppearance();"
+                                   onchange="ImageDialog.updateStyle('vspace');ImageDialog.changeAppearance();" size="3"
                                    type="text"
                                    value=""/>
                         </td>
@@ -138,14 +143,18 @@
 
                     <tr>
                         <td class="column1"><label for="hspace" id="hspacelabel">{#advimage_dlg.hspace}</label></td>
-                        <td><input class="number" id="hspace" maxlength="3" name="hspace" onblur="ImageDialog.updateStyle('hspace');ImageDialog.changeAppearance();" onchange="ImageDialog.updateStyle('hspace');ImageDialog.changeAppearance();" size="3"
+                        <td><input class="number" id="hspace" maxlength="3" name="hspace"
+                                   onblur="ImageDialog.updateStyle('hspace');ImageDialog.changeAppearance();"
+                                   onchange="ImageDialog.updateStyle('hspace');ImageDialog.changeAppearance();" size="3"
                                    type="text"
                                    value=""/></td>
                     </tr>
 
                     <tr>
                         <td class="column1"><label for="border" id="borderlabel">{#advimage_dlg.border}</label></td>
-                        <td><input class="number" id="border" maxlength="3" name="border" onblur="ImageDialog.updateStyle('border');ImageDialog.changeAppearance();" onchange="ImageDialog.updateStyle('border');ImageDialog.changeAppearance();" size="3"
+                        <td><input class="number" id="border" maxlength="3" name="border"
+                                   onblur="ImageDialog.updateStyle('border');ImageDialog.changeAppearance();"
+                                   onchange="ImageDialog.updateStyle('border');ImageDialog.changeAppearance();" size="3"
                                    type="text"
                                    value=""/></td>
                     </tr>
@@ -159,7 +168,8 @@
 
                     <tr>
                         <td class="column1"><label for="style" id="stylelabel">{#advimage_dlg.style}</label></td>
-                        <td colspan="2"><input id="style" name="style" onchange="ImageDialog.changeAppearance();" type="text"
+                        <td colspan="2"><input id="style" name="style" onchange="ImageDialog.changeAppearance();"
+                                               type="text"
                                                value=""/></td>
                     </tr>
 
@@ -175,7 +185,8 @@
             <fieldset>
                 <legend>{#advimage_dlg.swap_image}</legend>
 
-                <input aria-controls="onmouseoversrc onmouseoutsrc" class="checkbox" id="onmousemovecheck" name="onmousemovecheck"
+                <input aria-controls="onmouseoversrc onmouseoutsrc" class="checkbox" id="onmousemovecheck"
+                       name="onmousemovecheck"
                        onclick="ImageDialog.setSwapImage(this.checked);" type="checkbox"/>
                 <label for="onmousemovecheck" id="onmousemovechecklabel">{#advimage_dlg.alt_image}</label>
 

@@ -37,7 +37,6 @@
       <root url="jar://$PROJECT_DIR$/hrmapp/WebContent/WEB-INF/lib/log4j-core-2.3.jar!/" />
       <root url="jar://$PROJECT_DIR$/hrmapp/WebContent/WEB-INF/lib/slf4j-api-1.7.21.jar!/" />
       <root url="jar://$PROJECT_DIR$/hrmapp/WebContent/WEB-INF/lib/spring-core-4.2.0.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/hrmapp/WebContent/WEB-INF/lib/mysql-connector-java-5.1.30.jar!/" />
       <root url="jar://$PROJECT_DIR$/hrmapp/WebContent/WEB-INF/lib/ant-1.9.6.jar!/" />
       <root url="jar://$PROJECT_DIR$/hrmapp/WebContent/WEB-INF/lib/mybatis-3.4.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/hrmapp/WebContent/WEB-INF/lib/spring-aspects-4.2.0.RELEASE.jar!/" />
@@ -48,8 +47,11 @@
       <root url="jar://$PROJECT_DIR$/hrmapp/WebContent/WEB-INF/lib/spring-context-4.2.0.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/hrmapp/WebContent/WEB-INF/lib/hibernate-c3p0-4.3.5.Final.jar!/" />
       <root url="jar://$PROJECT_DIR$/hrmapp/WebContent/WEB-INF/lib/spring-web-4.2.0.RELEASE.jar!/" />
+      <root url="file:///opt/tomcat/lib" />
+      <root url="jar://$USER_HOME$/Downloads/mysql-connector-java-8.0.30.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <jarDirectory url="file:///opt/tomcat/lib" recursive="false" />
   </library>
 </component>

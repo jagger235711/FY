@@ -12,8 +12,6 @@
         </element>
       </element>
       <element id="javaee-facet-resources" facet="hrmapp/web/Web" />
-      <element id="javaee-facet-resources" facet="hrmapp/web/Web2" />
-      <element id="javaee-facet-resources" facet="hrmapp/web/Web3" />
     </root>
   </artifact>
 </component>

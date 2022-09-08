@@ -42,7 +42,7 @@
                 <li><A href="browse.jsp" target="body" class="scroll"> 浏览非遗 </A></li>
                 <%--                <li><A href="message.jsp" target="body" class="scroll"> 留言板 </A></li>--%>
                 <%--                <li><A href="backstage.jsp" target="body" class="scroll"> 管理员后台 </A></li>--%>
-                <li><A href="http://localhost:8082/hrmapp_war_exploded/main" target="_top" class="scroll"> 管理员后台 </A>
+                <li><A href="http://localhost:8081/hrmapp_war_exploded/main" target="_top" class="scroll"> 管理员后台 </A>
                 </li>
             </ul>
         </div>

@@ -12,7 +12,7 @@
 </head>
 <body>
 <%
-out.print("上传成功，请等待审核");
+    out.print("上传成功，请等待审核");
 %>
 </body>
 </html>

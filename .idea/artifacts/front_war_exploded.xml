@@ -8,8 +8,7 @@
           <element id="module-output" name="front" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="application" name="mysql.connector.java" />
-          <element id="library" level="application" name="lib" />
+          <element id="library" level="project" name="lib" />
         </element>
       </element>
     </root>

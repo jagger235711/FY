@@ -31,7 +31,8 @@
                 <legend>{#advanced_dlg.colorpicker_picker_title}</legend>
                 <div id="picker">
                     <img alt="" id="colors" onclick="computeColor(event)"
-                         onmousedown="isMouseDown = true;return false;" onmousemove="if (isMouseDown && isMouseOver) computeColor(event); return false;"
+                         onmousedown="isMouseDown = true;return false;"
+                         onmousemove="if (isMouseDown && isMouseOver) computeColor(event); return false;"
                          onmouseout="isMouseOver=false;"
                          onmouseover="isMouseOver=true;" onmouseup="isMouseDown = false;" src="img/colorpicker.jpg"/>
 
@@ -77,7 +78,8 @@
         <div id="preview"></div>
 
         <div id="previewblock">
-            <label for="color">{#advanced_dlg.colorpicker_color}</label> <input aria-required="true" class="text mceFocus" id="color"
+            <label for="color">{#advanced_dlg.colorpicker_color}</label> <input aria-required="true"
+                                                                                class="text mceFocus" id="color"
                                                                                 size="8"
                                                                                 type="text"/>
         </div>
